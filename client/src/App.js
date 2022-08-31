@@ -1,18 +1,21 @@
-import React, { useEffect } from 'react';
-import { useDispatch } from 'react-redux';
+import React from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
-//state actions
-import { FetchAllCars } from './redux/actions/car.actions';
 //components
+import { AddCar, CarPage, Dashboard } from './components';
 
 function App() {
-  const dispatch = useDispatch();
-
-  useEffect(() => {
-    dispatch(FetchAllCars());
-  }, []);
-
-  return <div className="App">chantier cars</div>;
+  return (
+    <div className="container__app">
+      <BrowserRouter>
+        <Routes>
+          <Route exact path="/" element={<Dashboard />} />
+          <Route exact path="/car/car_id" element={<CarPage />} />
+          <Route exact path="/new" element={<AddCar />} />
+        </Routes>
+      </BrowserRouter>
+    </div>
+  );
 }
 
 export default App;

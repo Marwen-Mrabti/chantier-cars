@@ -12,6 +12,9 @@ export const addNewCar = (newCar) => API.post(`/api/cars/new`, newCar);
 // fetch all cars from db
 export const fetchAllCars = () => API.get(`/api/cars/all`);
 
+// fetch car by id from db
+export const fetchCarById = (car_id) => API.get(`/api/cars/${car_id}`);
+
 //update a car
 export const updateCar = (car_id, updatedCar) =>
   API.put(`/api/cars/edit/${car_id}`, updatedCar);

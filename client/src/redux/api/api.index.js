@@ -21,3 +21,10 @@ export const updateCar = (car_id, updatedCar) =>
 
 //delete a car
 export const deleteCar = (car_id) => API.delete(`/api/cars/delete/${car_id}`);
+
+//add new repair
+export const addNewRepair = (car_id, newRepair) =>
+  API.post(`/api/reparations/new/${car_id}`, newRepair);
+//delete a car
+export const deleteRepair = (car_id, rep_id) =>
+  API.delete(`/api/reparations/delete_reparation/${car_id}/${rep_id}`);

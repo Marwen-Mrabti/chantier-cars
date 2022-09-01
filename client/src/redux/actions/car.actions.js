@@ -54,7 +54,7 @@ export const UpdateCar = (car_id, updatedCar) => async (dispatch) => {
 };
 
 //delete car
-export const DeletePost = (car_id) => async (dispatch) => {
+export const DeleteCar = (car_id) => async (dispatch) => {
   try {
     await api.deleteCar(car_id);
     dispatch({ type: DELETE_CAR, payload: car_id });

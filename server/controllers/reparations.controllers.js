@@ -21,7 +21,7 @@ export const AddNewReparation = async (req, res) => {
     //save the new reparation and the updated car
     await newReparation.save();
     await car.save();
-    res.status(201).json({ car });
+    res.status(201).json(car);
   } catch (error) {
     res.status(409).json({ message: error.message });
   }
@@ -53,7 +53,7 @@ export const UpdateReparation = async (req, res) => {
       //   { ...req.body, reparation_id },
       //   { new: true }
       // );
-      res.status(201).json({ message: 'reparation updated', car });
+      res.status(201).json(car);
     } else {
       res.status(404).json({ message: 'car not found' });
     }
@@ -81,7 +81,7 @@ export const DeleteReparation = async (req, res) => {
 
       // remove reparation from the database
       await Reparation.findByIdAndRemove(reparation_id);
-      res.status(201).json({ message: 'reparation deleted', car });
+      res.status(201).json(car);
     } else {
       res.status(404).json({ message: 'car not found' });
     }

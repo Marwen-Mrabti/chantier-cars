@@ -8,15 +8,15 @@ import {
   UpdateReparation,
 } from '../controllers/reparations.controllers.js';
 
-//@route => req:post => /api/reparations/new
+//@route => req:post => /api/reparations/new/:car_id
 //@desc => add new reparation
-ReparationRouter.post('/new_reparation/:car_id', AddNewReparation);
+ReparationRouter.post('/new/:car_id', AddNewReparation);
 
 //@route => req:post => /api/reparations/edit/:reparation_id
 //@desc => edit reparation
 ReparationRouter.put('/edit_reparation/:car_id/:reparation_id', UpdateReparation);
 
-//@route => req:post => /api/reparations/delete/:reparation_id
+//@route => req:post => /api/reparations/delete_reparation/:car_id/:reparation_id
 //@desc => delete reparation
 ReparationRouter.delete('/delete_reparation/:car_id/:reparation_id', DeleteReparation);
 

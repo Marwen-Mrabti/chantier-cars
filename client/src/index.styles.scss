@@ -32,17 +32,10 @@
 html {
   font-size: 62.5%; // 10px=1rem
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 body {
-  // background-image: linear-gradient(
-  //   to right,
-  //   #495057,
-  //   #868e96,
-  //   #adb5bd,
-  //   #868e96,
-  //   #495057
-  // );
   background-color: #fff;
   color: #222;
   font-family: 'Poppins', sans-serif;

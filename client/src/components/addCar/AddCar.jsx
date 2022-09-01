@@ -22,6 +22,7 @@ const defaultCar = {
   purchasePrice: 0,
   purchaseDate: '',
   images: [],
+  reparations: [],
   sold: {
     state: false,
     date: '',

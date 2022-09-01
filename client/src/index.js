@@ -6,7 +6,7 @@ import { Provider } from 'react-redux';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-daterangepicker/daterangepicker.css';
-import './index.scss';
+import './index.styles.scss';
 import App from './App';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
